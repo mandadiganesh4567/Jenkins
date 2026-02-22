@@ -34,6 +34,7 @@ pipeline {
             }
         }
     }
+    }
     post {
 
         always
@@ -48,5 +49,4 @@ pipeline {
             echo 'code is Failure!!'
         }
     }
-}
 }

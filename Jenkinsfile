@@ -26,6 +26,13 @@ pipeline {
         always
         {
             echo " I will always say Hello !!!"
+            cleanWs()
+        }
+        success {
+            echo 'Code is SUCCESS!!'
+        }
+        failure {
+            echo 'code is Failure!!'
         }
     }
 }

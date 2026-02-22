@@ -4,12 +4,16 @@ pipeline {
             label 'AGENT1'
           }
     }
+    environment {
+        Course = 'jenkins'
+    }
     stages {
         stage('Build') {
             steps {
                 script{
                     sh """
                             echo "Building"
+                            echo 'Im learning $Course'
                     """
                  }
             }

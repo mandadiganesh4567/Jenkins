@@ -9,6 +9,7 @@ pipeline {
     }
     options {
         timeout (time: 10, unit: 'SECONDS')
+        disableConcurrentBuilds()
     }
     stages {
         stage('Build') {
@@ -18,7 +19,7 @@ pipeline {
                             echo "Building"
                             echo 'Im learning $Course'
                             env
-                            sleep 10
+                            #sleep 10
                     """
                  }
             }
@@ -60,5 +61,6 @@ pipeline {
         aborted {
             echo 'Pipeline is aborted'
         }
+        
     }
 }
